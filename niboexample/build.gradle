@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
 
     defaultConfig {
         applicationId "com.alium.niboexample"
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
+        minSdkVersion 19
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
@@ -36,8 +36,8 @@ dependencies {
     //compile 'com.github.aliumujib:Nibo:v1.01'
 
     compile project(':nibo_library')
-    compile "com.android.support:appcompat-v7:$rootProject.ext.supportVersion"
-    compile "com.android.support.constraint:constraint-layout:1.0.2"
-    compile "com.android.support:design:$rootProject.ext.supportVersion"
+    compile "com.android.support:appcompat-v7:28.0.0"
+    compile "com.android.support.constraint:constraint-layout:1.1.3"
+    compile "com.android.support:design:28.0.0"
     testCompile 'junit:junit:4.12'
 }
