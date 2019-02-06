@@ -12,11 +12,12 @@
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginTop="@dimen/anchor_point"
-        android:layout_marginBottom="50dp"
-        android:layout_height="match_parent" />
+        android:layout_marginBottom="50dp" />
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -43,8 +44,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="16dp"
                 android:layout_marginLeft="16dp"
+                android:layout_marginBottom="16dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -60,19 +61,19 @@
                         android:layout_height="8dp" />
 
                     <View
+                        android:id="@+id/orig_dest_seperator_line"
                         android:layout_width="0.5dp"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:layout_marginBottom="3dp"
                         android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
                         android:layout_weight="1"
-                        android:id="@+id/orig_dest_seperator_line"
                         android:background="?originDestinationSeperatorLineColor" />
 
                     <com.alium.nibo.utils.customviews.RoundedView
                         android:id="@+id/rounded_indicator_destination"
-                        android:layout_width="8dp"
                         style="?destinationRoundViewStyle"
+                        android:layout_width="8dp"
                         android:layout_height="8dp" />
 
                 </LinearLayout>
@@ -81,8 +82,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="16dp"
-                    android:focusableInTouchMode="true"
                     android:layout_marginRight="48dp"
+                    android:focusableInTouchMode="true"
                     android:orientation="vertical">
 
                     <EditText
@@ -92,16 +93,16 @@
                         android:layout_marginBottom="8dp"
                         android:layout_weight="1"
                         android:background="@drawable/rectangle_rounded_origin"
+                        android:drawableRight="?editTextClearerIcon"
                         android:ellipsize="end"
                         android:hint="?attr/origEditTextHint"
-                        android:textColor="?attr/origEditTextTextColor"
-                        android:drawableRight="?editTextClearerIcon"
-                        android:textColorHint="?attr/origEditTextHintColor"
                         android:maxLines="1"
                         android:paddingLeft="8dp"
                         android:paddingRight="8dp"
                         android:singleLine="true"
-                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead" />
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                        android:textColor="?attr/origEditTextTextColor"
+                        android:textColorHint="?attr/origEditTextHintColor" />
 
                     <EditText
                         android:id="@+id/destination_edit_text"
@@ -109,17 +110,17 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:layout_weight="1"
-                        android:textColor="?attr/destEditTextTextColor"
                         android:background="@drawable/rectangle_rounded_destination"
-                        android:ellipsize="end"
                         android:drawableRight="?editTextClearerIcon"
-                        android:textColorHint="?attr/destEditTextHintColor"
+                        android:ellipsize="end"
                         android:hint="?attr/destEditTextHint"
                         android:maxLines="1"
                         android:paddingLeft="8dp"
                         android:paddingRight="8dp"
                         android:singleLine="true"
-                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead" />
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
+                        android:textColor="?attr/destEditTextTextColor"
+                        android:textColorHint="?attr/destEditTextHintColor" />
 
                 </LinearLayout>
 
@@ -157,13 +158,13 @@
         android:id="@+id/done_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="16dp"
-        app:layout_anchor="@+id/anchor_dummy"
-        app:layout_anchorGravity="top|end"
-        android:clickable="true"
         android:layout_gravity="right"
+        android:layout_marginRight="16dp"
+        android:clickable="true"
         android:src="?doneFabColorRes"
         app:backgroundTint="?primaryPolyLineColor"
+        app:layout_anchor="@+id/anchor_dummy"
+        app:layout_anchorGravity="top|end"
         app:rippleColor="#FFF" />
 
     <View
@@ -179,10 +180,10 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:clickable="true"
-        app:layout_anchor="@id/dummy"
-        app:layout_anchorGravity="top|right|end"
         android:src="@drawable/ic_crosshairs_gps_def"
         app:backgroundTint="#FFFFFF"
+        app:layout_anchor="@id/dummy"
+        app:layout_anchorGravity="top|right|end"
         app:rippleColor="#FFF" />
 
 
